@@ -4,16 +4,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <title>{{config('app.name', 'NakamFood')}}</title>
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <title>{{config('app.name', 'NakamFood')}}</title>
+        
        
     </head>
     <body>
-        @include('include.navbar')
-       <br>
-        <div class='container'>
-            @yield('content')
+        <br>
+       <div class='container'>
+            <h1>{{$title}}</h1>
+            <p> NakamFood adalah sebuah aplikasi antar makanan </p>
        </div>
     </body>
 </html>
