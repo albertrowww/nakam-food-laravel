@@ -1,5 +1,6 @@
 CREATE DATABASE nakam_food
 
+USE DATABASE nakam_food
 CREATE TABLE pelanggan
 (
   telepon_pelangaan VARCHAR(12) NOT NULL,

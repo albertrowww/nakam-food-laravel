@@ -21,10 +21,4 @@ class PagesController extends Controller
         );
         return view('pages.services')->with($data);
     }
-    public function contoh(){
-        $data = array(
-            'title' => 'contoh NakamFood'
-        );
-        return view('pages.contoh')->with($data);
-    }
 }
