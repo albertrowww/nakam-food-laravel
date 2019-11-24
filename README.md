@@ -21,13 +21,18 @@ Setelah itu, duplikasi file .env.example menjadi .env dan atur database
 ```
 
 Lalu jalankan perintah,
+
 ```sh
+
 $ composer update
+$ php artisan key:generate
+$ php artisan config:cache
+$ php artisan ser
+
 ```
 
 **JANGAN LUPA UNTUK MENGATUR TOKEN GITHUB** <br>
 GUIDE: *www.previousnext.com.au/blog/managing-composer-github-access-personal-access-tokens*
 
-**Merge Fork dengan Upstream** <br>
+**TIPS merge Upstream ke repo hasil Fork**
 *help.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-an-upstream-repository-into-your-fork*
-
