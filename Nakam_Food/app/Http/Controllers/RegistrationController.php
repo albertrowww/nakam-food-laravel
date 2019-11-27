@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
-use App\User;
+use App\Register;
  
 class RegistrationController extends Controller
 {
@@ -12,20 +12,23 @@ class RegistrationController extends Controller
         return view('registration.create');
     }
     
-    public function store()
+    public function store(Request $request)
     {
         $this->validate(request(), [
             'fname' => 'required',
             'minit' => 'required',
             'lname' => 'required',
-            'surel' => 'required|email',
             'telp' => 'required'
         ]);
-        
-        $user = user::create(request(['fname', 'minit', 'lname','surel', 'telp']));
-        
-        auth()->login($user);
-        
-        return redirect()->to('/');
+
+        $pelanggan = new Register;
+        $pelanggan->nama_depan = $request->input('fname');
+        $pelanggan->nama_tengah = $request->input('minit');
+        $pelanggan->nama_belakang = $request->input('lname');
+        $pelanggan->surel = $request->input('email');
+        $pelanggan->telepon_pelanggan = $request->input('telp');
+        $pelanggan->save();
+
+        return redirect('/');
     }
 }
