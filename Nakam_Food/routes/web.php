@@ -20,4 +20,5 @@ Route::get('/services', 'PagesController@services');
 Route::get('/contoh', 'PagesController@contoh');
 
 Route::get('/register', 'RegistrationController@create');
+
 Route::post('register', 'RegistrationController@store');

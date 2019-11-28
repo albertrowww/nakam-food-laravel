@@ -3,7 +3,7 @@
 @section('content')
  
     <h2>Register</h2>
-    <form method="POST" action="/register">
+    <form method="post" action="/register">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="telepon_pelangaan">Nomor Telepon:</label>
@@ -16,8 +16,8 @@
         </div>
  
         <div class="form-group">
-            <label for="nama_tengah">Inisial Tengah:</label>
-            <input type="text" class="form-control" id="nama_tengah" name="nama_tengah">
+            <label for="Inisial_tengah">Inisial Tengah:</label>
+            <input type="char" class="form-control" id="Inisial_tengah" name="Inisial_tengah">
         </div>
  
         <div class="form-group">
